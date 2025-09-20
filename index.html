@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Pomodoro</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<script language ="javascript" src="pomodoro.js"></script>
+
+<body>
+<div class="container">
+  <div class="title">
+    <h1> Pomodoro </h1>
+  </div>
+  <div class="menu">
+    <ul>
+      <li id="work"> <button>work</button>
+      </li>
+      <li id="short_break">
+        <button>short break</button>
+      </li>
+      <li id="long_break">
+        <button>long break</button>
+      </li>
+    </ul>
+  </div>
+  <div class="timer">
+    <div class="counter">
+      <span id="countdown"></span>
+    </div>
+    <button onclick="start_pause_pomodoro()"> <span id="pause"></span> </button>
+  </div>
+  <div class="status">
+    <span id="status_text"><b></b></span>
+    <span class="next"><b>Coming next:</b> <span id="next_status"></span></span>
+    <div class="reset">
+      <button onclick="reset()">RESET</button>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
