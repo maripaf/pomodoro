@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #5b0d75;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.title {
+  font-family: "Akaya Telivigala", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    width: 400px;
+    border-radius: 24px;
+    margin-bottom: 20px;
+
+    li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+      font-size: 14px;
+      border-radius: 24px;
+
+      button {
+        background: none;
+        border: 0;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+        transition: all 500ms ease-in-out;
+      }
+
+      button:after {
+        content: "";
+
+        transition: inherit;
+
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #b5109a;
+
+        position: absolute;
+        top: -50%;
+        left: -10px;
+
+        opacity: 0.3;
+        z-index: -1;
+      }
+
+      .workActive:after {
+        width: calc(100% + 20px);
+        border-radius: 20px;
+        opacity: 1;
+      }
+    }
+  }
+
+  .timer {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      125deg,
+      rgba(91, 13, 117, 1) 0%,
+      rgba(49, 8, 64, 1) 100%
+    );
+    flex-direction: column;
+    font-family: "Akaya Telivigala", sans-serif;
+
+    .counter {
+      font-size: 60px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      margin-top: 20px;
+      outline: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+
+  .status {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 20px;
+      padding-bottom: 40px;
+    }
+
+    .next {
+      color: #aea2b3;
+    }
+    .reset {
+      button {
+        height: 40px;
+        width: 160px;
+        font-size: 15px;
+        border-radius: 30px;
+        background: none;
+        color: white;
+      }
+    }
+  }
+}
